@@ -1,5 +1,5 @@
 import os
-from model import predict,load_model
+from models import predict,load_model
 
 def check_model_exist():
     assert os.path.exists("model.pkl")
