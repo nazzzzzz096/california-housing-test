@@ -1,7 +1,7 @@
 from sklearn.datasets import fetch_california_housing
 from sklearn.model_selection import train_test_split
 import pickle
-from sklearn.ensemble import RandomForestClassifier
+from sklearn.ensemble import RandomForestRegressor
 
 
 data=fetch_california_housing()
@@ -13,7 +13,7 @@ print("First target value:", data.target[0])
 
 x_train,x_test,y_train,y_test=train_test_split(data.data,data.target,random_state=42,test_size=0.2)
 
-model=RandomForestClassifier(n_estimators=50)
+model=RandomForestRegressor(n_estimators=50)
 
 model.fit(x_train,y_train)
 
