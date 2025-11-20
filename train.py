@@ -18,5 +18,5 @@ model=RandomForestClassifier(n_estimators=50)
 model.fit(x_train,y_train)
 
 with open("model.pkl","wb") as f:
-    pickle.dump(model)
+    pickle.dump(model,f)
 
